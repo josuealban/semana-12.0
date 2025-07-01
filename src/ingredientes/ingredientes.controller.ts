@@ -18,12 +18,13 @@ export class IngredientesController {
     return this.ingredientesService.findAll();
   }
   @Put(':id')
-  update(@Param('id') id: number, @Body() dto: UpdateIngredienteDto) {
+  update(@Param('id') id: string, @Body() dto: UpdateIngredienteDto) {
     return this.ingredientesService.update(+id, dto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: number) {
+  remove(@Param('id') id: string) {
     return this.ingredientesService.remove(+id);
   }
+  
 }
