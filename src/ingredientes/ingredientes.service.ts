@@ -21,10 +21,12 @@ export class IngredientesService {
   findAll() {
     return this.ingredienteRepo.find();   
   }
+
    async update(id: number, dto: UpdateIngredienteDto) {
     await this.ingredienteRepo.update(id, dto);
      return this.ingredienteRepo.findOneBy({ id });
   }
+  
   remove(id: number) {
     return this.ingredienteRepo.delete(id);
   }
