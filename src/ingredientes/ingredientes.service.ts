@@ -18,7 +18,7 @@ export class IngredientesService {
   }
  
   @Get()
- findAll() {
+  findAll() {
     return this.ingredienteRepo.find();   
   }
    async update(id: number, dto: UpdateIngredienteDto) {
