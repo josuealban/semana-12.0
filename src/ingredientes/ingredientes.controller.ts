@@ -17,6 +17,7 @@ export class IngredientesController {
   findAll() {
     return this.ingredientesService.findAll();
   }
+  
   @Put(':id')
   update(@Param('id') id: string, @Body() dto: UpdateIngredienteDto) {
     return this.ingredientesService.update(+id, dto);
